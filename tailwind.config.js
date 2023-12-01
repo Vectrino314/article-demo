@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'DM Sans fallback', ...defaultTheme.fontFamily.sans],
+        space: ['Space Grotesk', 'Space Mono fallback', ...defaultTheme.fontFamily.mono]
+      },
       colors: {
         'brand': '#fc5926',
         'brand-light': '#fcd2c1',
